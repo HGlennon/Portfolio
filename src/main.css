@@ -24,8 +24,7 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  min-width: 320px;
+  min-width: 100px;
   min-height: 100vh;
 }
 
@@ -69,12 +68,12 @@ button:focus-visible {
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2vw 1 vw;
   text-align: center;
 }
 
 .card { 
-  padding: 2em; 
+  padding: 2em 1em; 
 }
 
 .read-the-docs {
@@ -83,10 +82,6 @@ button:focus-visible {
 
 * {
     box-sizing: border-box;
-}
-
-body {
-    margin: 0;
 }
 
 .nav {
@@ -112,14 +107,17 @@ body {
 }
 
 .imageStyle {
-  width: 60px;
-  height: 60px;
+  width: 12vw;
+  max-width: 60px;
+  height: auto;
   cursor: pointer;
   margin: 4px;
 }
 
 .sidebar {
-  width: 400px;
+  width: 90vw;
+  max-width: 410px;
+  min-width: 250px;
   height: 100vh;
   position: fixed;
   right: 0;
@@ -127,6 +125,18 @@ body {
   background-color: #fff;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
   z-index: 999;
+  animation: sidebarFadeIn 0.7s ease;
+}
+
+@keyframes sidebarFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(100vw);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .sidebar-close {
@@ -141,4 +151,10 @@ body {
   width: 100%;
   height: calc(100% - 40px);
   border: none;
+}
+
+.close-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
 }

@@ -6,7 +6,9 @@ import javaScriptLogo from './assets/javaScript.svg'
 import mySQLogo from './assets/mysql.svg'
 import htmlLogo from './assets/html.svg'
 import cssLogo from './assets/css.svg'
+import crossIcon from './assets/cross.svg';
 
+// Temporary, may change in the future for explanation on how I use these languages and frameworks
 const imageWikiLinks = {
   css: "https://en.wikipedia.org/wiki/CSS",
   javascript: "https://en.wikipedia.org/wiki/JavaScript",
@@ -37,10 +39,11 @@ function Images() {
         <img src={mySQLogo} alt="MySQL" className="imageStyle" onClick={() => handleImageClick("mysql")}/>
     </div>
 
+    {/* Consider making the design for when this pops up more responsive, shifts elements on screen to fit them in */}
     {activeImage && (
       <div className="sidebar">
         <div className="sidebar-close" onClick={closeSidebar}>
-          x Close
+          <img src={crossIcon} alt="Close" className="close-icon"/>
         </div>
         <iframe
           title={`${activeImage} Wikipedia`}

@@ -65,3 +65,80 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.card { 
+  padding: 2em; 
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.nav {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav a {
+    color: inherit;
+}
+
+.imageStyle {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  margin: 4px;
+}
+
+.sidebar {
+  width: 400px;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-color: #fff;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+.sidebar-close {
+  text-align: right;
+  padding: 10px;
+  background: #f4f4f4;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.sidebar iframe {
+  width: 100%;
+  height: calc(100% - 40px);
+  border: none;
+}

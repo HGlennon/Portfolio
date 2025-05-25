@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './styles.css'
+import './main.css'
 import GitHubCalendar from 'react-github-calendar';
 import Navbar from './Navbar';
 import Images from './images';
@@ -11,6 +11,12 @@ function App() {
     <>
       <Navbar/>
       <h1>Harrison Glennon Portfolio</h1>
+      <div className="about-me">
+        <h2>About Me</h2>
+        <p>
+          Hello! My name is Harrison Glennon, and I am a software developer with a passion for creating innovative solutions. I have experience in various programming languages and frameworks, and I enjoy working on projects that challenge my skills and creativity.
+        </p>
+      </div>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
@@ -39,7 +45,10 @@ function App() {
           My Projects
         </p>
       </div>
-      <GitHubCalendar username="BeansAreOk" /> {/* Documentation: https://grubersjoe.github.io/react-github-calendar/ */}
+      <GitHubCalendar username="BeansAreOk" /> {/* Github Calendar Documentation: https://grubersjoe.github.io/react-github-calendar/ */}
+      <p>
+        hello world
+      </p>
     </>
   )
 }

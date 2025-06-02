@@ -4,6 +4,7 @@ import GitHubCalendar from 'react-github-calendar';
 import Navbar from './Navbar';
 import Images from './images';
 
+// Remember to move this project to continous deployment netlify
 function App() {
   const [count, setCount] = useState(0)
 
@@ -46,8 +47,9 @@ function App() {
         </p>
       </div>
       <GitHubCalendar username="BeansAreOk" /> {/* Github Calendar Documentation: https://grubersjoe.github.io/react-github-calendar/ */}
+      {/* Add a section to send name, your email, and a message that goes to my email account*/}
       <p>
-        hello world
+        Contact Me
       </p>
     </>
   )

@@ -18,6 +18,7 @@ const imageWikiLinks = {
   mysql: "https://en.wikipedia.org/wiki/MySQL"
 };
 
+// Add Git, Github, and C++
 function Images() {
   const [activeImage, setActiveImage] = useState(null);
 

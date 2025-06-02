@@ -46,7 +46,7 @@ function App() {
           My Projects
         </p>
       </div>
-      <GitHubCalendar username="BeansAreOk" /> {/* Github Calendar Documentation: https://grubersjoe.github.io/react-github-calendar/ */}
+      <GitHubCalendar username="HGlennon" /> {/* Github Calendar Documentation: https://grubersjoe.github.io/react-github-calendar/ */}
       {/* Add a section to send name, your email, and a message that goes to my email account*/}
       <p>
         Contact Me

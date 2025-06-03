@@ -40,7 +40,7 @@ function Images() {
         <img src={mySQLogo} alt="MySQL" className="imageStyle" onClick={() => handleImageClick("mysql")}/>
     </div>
 
-    {/* Consider making the design for when this pops up more responsive, shifts elements on screen to fit them in */}
+    {/* Consider making the design for when this pops up more responsive, shifts elements on screen to fit them in the program*/}
     {activeImage && (
       <div className="sidebar">
         <div className="sidebar-close" onClick={closeSidebar}>

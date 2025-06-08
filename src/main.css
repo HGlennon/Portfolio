@@ -1,26 +1,46 @@
 :root {
-  --text-color: rgba(255, 255, 255, 0.87);
-  --background-color: #242424;
-  --link-color: #646cff;
-  --link-hover: #535bf2;
-  --button-bg: #1a1a1a;
-}
+  --color-bg: #121212;
+  --color-text: rgba(255, 255, 255, 0.87);
+  --color-accent: #646cff;
+  --color-accent-hover: #535bf2;
+  --color-button-bg: #1a1a1a;
+  --color-border: #333;
 
-[data-theme="light"] {
-  --text-color: #213547;
-  --background-color: #ffffff;
-  --link-color: #646cff;
-  --link-hover: #747bff;
-  --button-bg: #f9f9f9;
-}
+  --font-body: 'Inter', 'system-ui', sans-serif;
 
-#root {
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-xl: 16px;
 }
 
 body {
+  font-family: var(--font-body);
   margin: 0;
-  color: var(--text-color);
-  background-color: var(--background-color);
+  color: var(--color-text); 
+  background-color: var(--color-bg); 
+  min-height: 100vh;
+}
+
+html {
+  height: 100%;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 3.5fr 4fr;
+  gap: 4rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+aside {
+  padding: 2rem;
+  margin-top: 1.5rem;
+}
+
+.content {
+  padding: 4rem;
+  margin-top: 1.5rem;
 }
 
 a {
@@ -35,43 +55,15 @@ h1 {
   line-height: 1.1;
 }
 
-.card { 
-  padding: 2em 1em; 
-}
-
-.read-the-docs {
-  color: #888;
+.card {
+  background-color: var(--color-button-bg);
+  padding: 2rem;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 * {
     box-sizing: border-box;
-}
-
-.nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background-color: #333;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
-    padding: 0 1rem;
-    width: 100vw;
-    max-width: none;
-}
-
-.nav ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-}
-
-.nav a {
-    color: inherit;
 }
 
 .imageStyle {
@@ -90,7 +82,8 @@ h1 {
   position: fixed;
   right: 0;
   top: 0;
-  background-color: #fff;
+  background-color: var(--color-bg);
+  color: var(--color-text);
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
   z-index: 999;
   animation: sidebarFadeIn 0.7s ease;
@@ -110,7 +103,7 @@ h1 {
 .sidebar-close {
   text-align: right;
   padding: 10px;
-  background: #f4f4f4;
+  background: var(--color-bg);
   cursor: pointer;
   font-weight: bold;
 }
@@ -125,22 +118,4 @@ h1 {
   width: 20px;
   height: 20px;
   cursor: pointer;
-}
-
-.theme-toggle {
-  font-size: 1.5rem;
-  background: var(--button-bg);
-  border: none;
-  border-radius: 9999px;
-  width: 3rem;
-  height: 3rem;
-  cursor: pointer;
-  transition: 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
-.theme-toggle:hover {
-  background: var(--link-hover);
 }

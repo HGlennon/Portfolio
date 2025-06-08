@@ -32,6 +32,16 @@ export default function Content() {
           description="In hac habitasse platea dictumst. Phasellus gravida semper nisi. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum."
           link="https://example.com"
         />
+                <ProjectCard
+          title="Portfolio Website"
+          description="In hac habitasse platea dictumst. Phasellus gravida semper nisi. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum."
+          link="https://example.com"
+        />
+                <ProjectCard
+          title="Portfolio Website"
+          description="In hac habitasse platea dictumst. Phasellus gravida semper nisi. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum."
+          link="https://example.com"
+        />
       </section>
 
       <section id="contact">

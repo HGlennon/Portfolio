@@ -24,21 +24,27 @@ html {
   height: 100%;
 }
 
-.layout {
-  display: grid;
-  grid-template-columns: 3.5fr 4.2fr;
-  gap: 2em;
-  max-width: 1200px;
-  margin: 0 auto;
+aside {
+  position: fixed;
+  top: 0;
+  left: 310px;         /* Add space from the left edge */
+  width: 600px;;
+  height: 100vh;
+  padding: 4rem;
+  margin-top: 0;
+  background: var(--color-bg);
+  z-index: 100;
 }
 
-aside {
-  padding: 2rem;
-  margin-top: 1.5rem;
-  width: 100%;
+.layout {
+  display: block;
+  margin-left: 825px; /* 320px aside + 40px gap */
+  max-width: 1200px;
+  padding: 0 2em;
 }
 
 .content {
+  margin-right: 310px;
   padding: 4rem;
   margin-top: 1.5rem;
 }

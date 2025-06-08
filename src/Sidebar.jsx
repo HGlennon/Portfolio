@@ -16,10 +16,10 @@ export default function Sidebar() {
         <a href="#contact">Contact Me</a>
       </nav>
       <div className="social-icons">
-          <a href="https://github.com/HGlennon" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <a href="https://github.com/HGlennon" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
             <FaGithub size={28} />
           </a>
-          <a href="https://www.linkedin.com/in/harrisonglennon/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/harrisonglennon/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
             <FaLinkedin size={28} />
         </a>
       </div>

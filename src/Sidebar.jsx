@@ -1,5 +1,5 @@
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { IconContext } from "react-icons";
+import { Tooltip } from 'react-tooltip'
 
 export default function Sidebar() {
   return (
@@ -16,13 +16,41 @@ export default function Sidebar() {
         <a href="#contact">Contact Me</a>
       </nav>
       <div className="social-icons">
-          <a href="https://github.com/HGlennon" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+          <a 
+            href="https://github.com/HGlennon" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            aria-label="GitHub"
+            data-tooltip-id="github-tooltip"
+            data-tooltip-content="GitHub"
+          >
             <FaGithub size={28} />
           </a>
-          <a href="https://www.linkedin.com/in/harrisonglennon/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+          <a 
+            href="https://www.linkedin.com/in/harrisonglennon/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            aria-label="LinkedIn"
+            data-tooltip-id="linkedin-tooltip"
+            data-tooltip-content="LinkedIn"
+          >
             <FaLinkedin size={28} />
         </a>
       </div>
+      <Tooltip 
+        id="github-tooltip" 
+        place="bottom" 
+        className="tooltip-style"
+        delayShow={300}
+        delayHide={100}
+        />
+      <Tooltip 
+        id="linkedin-tooltip" 
+        place="bottom" 
+        className="tooltip-style" 
+        delayShow={300}
+        delayHide={100}
+        />
     </aside>
   );
 }

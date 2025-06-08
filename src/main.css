@@ -49,6 +49,23 @@ aside {
   margin-top: 1.5rem;
 }
 
+/* Laptops */
+@media (max-width: 1500px){
+  .layout { 
+    margin-left: 700px; 
+    max-width: 1200px;
+    padding: 0 2em;
+  }
+  aside {
+    left: 100px;
+    width: 600px
+  }
+  .content {
+    margin-right: 100px;
+  }
+}
+
+/* Tablets and phones */
 @media (max-width: 1024px) {
   aside {
     position: static;
@@ -66,31 +83,6 @@ aside {
   .content {
     margin-right: 0;
     padding: 1.5rem 1rem;
-  }
-}
-
-@media (max-width: 600px) {
-  aside,
-  .content {
-    padding: 1rem 0.5rem;
-    width: 100%;
-  }
-  aside {
-    min-width: 0;
-    max-width: 100%;
-    padding: 1rem 0.5rem;
-  }
-  .layout {
-    padding: 0 0.5em;
-  }
-  h1 {
-    font-size: 1.5em;
-  }
-  .card {
-    padding: 0.5rem;
-  }
-  .social-icons {
-    gap: 0.25rem;
   }
 }
 

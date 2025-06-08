@@ -1,4 +1,5 @@
 import Images from './images';
+import ProjectCard from './ProjectCard';
 
 export default function Content() {
   return (
@@ -16,6 +17,21 @@ export default function Content() {
 
       <section id="projects">
         <p>Here are some of the projects I have worked on:</p>
+        <ProjectCard
+          title="HFM Redux"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut."
+          link="https://example.com"
+        />
+        <ProjectCard
+          title="FoodMate"
+          description="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.."
+          link="https://example.com"
+        />
+        <ProjectCard
+          title="Portfolio Website"
+          description="In hac habitasse platea dictumst. Phasellus gravida semper nisi. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum."
+          link="https://example.com"
+        />
       </section>
 
       <section id="contact">

@@ -1,3 +1,6 @@
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { IconContext } from "react-icons";
+
 export default function Sidebar() {
   return (
     <aside>
@@ -12,6 +15,14 @@ export default function Sidebar() {
         <a href="#projects">Projects</a>
         <a href="#contact">Contact Me</a>
       </nav>
+      <div className="social-icons">
+          <a href="https://github.com/HGlennon" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <FaGithub size={28} />
+          </a>
+          <a href="https://www.linkedin.com/in/harrisonglennon/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <FaLinkedin size={28} />
+        </a>
+      </div>
     </aside>
   );
 }

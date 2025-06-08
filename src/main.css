@@ -1,10 +1,9 @@
 :root {
-  --color-bg: #121212;
-  --color-text: rgba(255, 255, 255, 0.87);
-  --color-accent: #646cff;
-  --color-accent-hover: #535bf2;
-  --color-button-bg: #1a1a1a;
-  --color-border: #333;
+  --color-bg: #0f172a;       /* deep navy */
+  --color-text: #e2e8f0;     /* light slate */
+  --color-accent: #38bdf8;   /* sky blue */
+  --color-accent-hover: #0ea5e9;
+  --color-button-bg: #1e293b; /* dark slate */
 
   --font-body: 'Inter', 'system-ui', sans-serif;
 
@@ -27,20 +26,34 @@ html {
 
 .layout {
   display: grid;
-  grid-template-columns: 3.5fr 4fr;
-  gap: 4rem;
-  max-width: 1280px;
+  grid-template-columns: 3.5fr 4.2fr;
+  gap: 2em;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 aside {
   padding: 2rem;
   margin-top: 1.5rem;
+  width: 100%;
 }
 
 .content {
   padding: 4rem;
   margin-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr; /* Stack sidebar and content */
+  }
+
+  aside,
+  .content {
+    width: 100%;
+    margin-top: 0;
+    padding: 1rem;
+  }
 }
 
 a {
@@ -118,4 +131,47 @@ h1 {
   width: 20px;
   height: 20px;
   cursor: pointer;
+}
+
+aside h1 {
+  margin-bottom: 0.3em; /* or try 0, or even negative margin if needed */
+}
+
+aside h2 {
+  margin-top: 0;
+}
+
+.social-icons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.social-icons a {
+  color: grey;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: white;
+}
+
+.project-card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.project-card h3 {
+  margin: 0 0 0.5rem;
+}
+
+.project-card p {
+  margin: 0 0 0.75rem;
+}
+
+.project-card a {
+  color: #4ea8de;
+  text-decoration: none;
 }

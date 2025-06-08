@@ -1,13 +1,17 @@
 import Sidebar from './Sidebar';
 import Content from './Content';
 import './main.css';
+import CustomCursor from './CustomCursor';
 
 function App() {
   return (
-    <div className="layout">
-      <Sidebar/>
-      <Content/>
-    </div>
+    <>
+      <CustomCursor/>
+      <div className="layout">
+        <Sidebar/>
+        <Content/>
+      </div>
+    </>
   );
 }
 

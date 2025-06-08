@@ -1,3 +1,4 @@
+// components/ProjectCard.jsx
 export default function ProjectCard({ title, description, link }) {
   return (
     <div className="project-card">

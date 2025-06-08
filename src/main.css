@@ -24,67 +24,60 @@ html {
   height: 100%;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 2rem;
+  max-width: 1320px;
+  margin: 0 auto;
+  gap: 4rem;
+}
+
 aside {
-  position: fixed;
-  top: 0;
-  left: 310px;        
-  width: 600px;;
-  height: 100vh;
-  padding: 4rem;
-  margin-top: 0;
-  background: var(--color-bg);
-  z-index: 100;
+  position: sticky;
+  top: 4rem; /* Keeps it fixed while scrolling */
+  flex: 1;
+  max-width: 600px;
+  height: fit-content;
+  padding: 2rem;
 }
 
 .layout {
-  display: block;
-  margin-left: 825px; /* Adjusted for fixed sidebar */
-  max-width: 1200px;
-  padding: 0 2em;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
 }
 
 .content {
-  margin-right: 310px;
+  flex: 2;
+  max-width: 720px;
   padding: 4rem;
-  margin-top: 1.5rem;
 }
 
-/* Laptops */
-@media (max-width: 1500px){
-  .layout { 
-    margin-left: 700px; 
-    max-width: 1200px;
-    padding: 0 2em;
-  }
-  aside {
-    left: 100px;
-    width: 600px
-  }
-  .content {
-    margin-right: 100px;
-  }
-}
 
-/* Tablets and phones */
 @media (max-width: 1024px) {
-  aside {
-    position: static;
-    width: 100%;
-    left: 0;
-    height: auto;
-    padding: 1.5rem 1rem;
-    box-shadow: none;
+  .container {
+    padding: 1rem 0.5rem; /* Less padding on both sides */
   }
   .layout {
-    margin-left: 0;
-    max-width: 100%;
-    padding: 0 1em;
+    flex-direction: column;
+    gap: 2rem;
   }
+
+  aside,
   .content {
-    margin-right: 0;
-    padding: 1.5rem 1rem;
+    max-width: 100%;
+    position: static;
+    padding: 1rem 0.5rem;
+  }
+
+  aside {
+    top: auto;
   }
 }
+
+
 
 
 a {

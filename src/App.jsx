@@ -7,9 +7,11 @@ function App() {
   return (
     <>
       <CustomCursor/>
-      <div className="layout">
-        <Sidebar/>
-        <Content/>
+      <div className = "container">
+        <div className="layout">
+          <Sidebar/>
+          <Content/>
+        </div>
       </div>
     </>
   );

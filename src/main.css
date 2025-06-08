@@ -27,7 +27,7 @@ html {
 aside {
   position: fixed;
   top: 0;
-  left: 310px;         /* Add space from the left edge */
+  left: 310px;        
   width: 600px;;
   height: 100vh;
   padding: 4rem;
@@ -38,7 +38,7 @@ aside {
 
 .layout {
   display: block;
-  margin-left: 825px; /* 320px aside + 40px gap */
+  margin-left: 825px; /* Adjusted for fixed sidebar */
   max-width: 1200px;
   padding: 0 2em;
 }
@@ -49,19 +49,38 @@ aside {
   margin-top: 1.5rem;
 }
 
-@media (max-width: 768px) {
-  .layout {
-    grid-template-columns: 1fr; /* Stack sidebar and content */
-  }
-
-  aside,
-  .content {
+@media (max-width: 900px) {
+  aside {
+    position: static;
     width: 100%;
-    margin-top: 0;
-    padding: 1rem;
+    left: 0;
+    height: auto;
+    padding: 1.5rem 1rem;
+    box-shadow: none;
+  }
+  .layout {
+    margin-left: 0;
+    max-width: 100%;
+    padding: 0 1em;
+  }
+  .content {
+    margin-right: 0;
+    padding: 1.5rem 1rem;
   }
 }
 
+@media (max-width: 600px) {
+  aside,
+  .content {
+    padding: 1rem 0.5rem;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  .card {
+    padding: 1rem;
+  }
+}
 a {
   color: var(--link-color);
 }

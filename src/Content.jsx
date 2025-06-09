@@ -1,5 +1,9 @@
 import Images from './images';
 import ProjectCard from './ProjectCard';
+import HFMReduxImg from './assets/HFM_Redux.png';
+import FoodMateImg from './assets/FoodMate.jpg';
+import PortfolioImg from './assets/Portfolio.png';
+import ContactForm from './form';
 
 export default function Content() {
   return (
@@ -20,23 +24,23 @@ export default function Content() {
         <ProjectCard
           title="HFM Redux"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut."
-          link="https://example.com"
+          link="https://moddb.com/mods/hfm-redux"
+          image = {HFMReduxImg}
         />
         <ProjectCard
           title="FoodMate"
           description="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.."
-          link="https://example.com"
+          link="https://foodmate.dev"
+          image = {FoodMateImg}
         />
         <ProjectCard
           title="Portfolio Website"
           description="In hac habitasse platea dictumst. Phasellus gravida semper nisi. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum."
-          link="https://example.com"
+          link="https://hglennon.dev"
+          image = {PortfolioImg}
         />
       </section>
-
-      <section id="contact">
-        <h2>Contact Me</h2>
-      </section>
+      <ContactForm/>
     </main>
   );
 }

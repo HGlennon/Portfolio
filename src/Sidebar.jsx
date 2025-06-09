@@ -1,11 +1,21 @@
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaRegEnvelope, FaGithub, FaLinkedin } from "react-icons/fa6";
 import { Tooltip } from 'react-tooltip'
 
+
 export default function Sidebar() {
+
+  const email = "harrisongle@gmail.com";
+  const subject = "";
+  const message = "";
+
   return (
     <aside>
       <div>
-        <h1>Harrison Glennon</h1>
+        <h1>
+          <a href="#about" style={{ color: "inherit", textDecoration: "none" }}>
+            Harrison Glennon
+          </a>
+        </h1>        
         <h2>Aspiring Web Developer</h2>
         <p>I build fast, accessible, modern web experiences.</p>
       </div>
@@ -13,7 +23,6 @@ export default function Sidebar() {
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
-        <a href="#contact">Contact Me</a>
       </nav>
       <div className="social-icons">
           <a 
@@ -35,7 +44,17 @@ export default function Sidebar() {
             data-tooltip-content="LinkedIn"
           >
             <FaLinkedin size={28} />
-        </a>
+          </a>
+          <a 
+            href={`mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`}
+            target="_blank" 
+            rel="noopener noreferrer" 
+            aria-label="Email"
+            data-tooltip-id="email-tooltip"
+            data-tooltip-content="Message Me!"
+          >
+            <FaRegEnvelope size={28} />
+          </a>
       </div>
       <Tooltip 
         id="github-tooltip" 
@@ -43,14 +62,21 @@ export default function Sidebar() {
         className="tooltip-style"
         delayShow={300}
         delayHide={100}
-        />
+      />
       <Tooltip 
         id="linkedin-tooltip" 
         place="bottom" 
         className="tooltip-style" 
         delayShow={300}
         delayHide={100}
-        />
+      />
+      <Tooltip 
+        id="email-tooltip" 
+        place="bottom" 
+        className="tooltip-style" 
+        delayShow={300}
+        delayHide={100}
+      />
     </aside>
   );
 }

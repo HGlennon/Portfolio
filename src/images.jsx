@@ -8,6 +8,15 @@ import htmlLogo from './assets/html.svg'
 import cssLogo from './assets/css.svg'
 import crossIcon from './assets/cross.svg';
 
+const techIcons = [
+  { key: 'react', src: reactLogo, alt: 'React', link: 'react' },
+  { key: 'mui', src: muiLogo, alt: 'MUI', link: 'mui' },
+  { key: 'javascript', src: javaScriptLogo, alt: 'JavaScript', link: 'javascript' },
+  { key: 'mysql', src: mySQLogo, alt: 'MySQL', link: 'mysql' },
+  { key: 'html', src: htmlLogo, alt: 'HTML', link: 'html' },
+  { key: 'css', src: cssLogo, alt: 'CSS', link: 'css' }
+];
+
 // Temporary, may change in the future for explanation on how I use these languages and frameworks
 const imageWikiLinks = {
   css: "https://en.wikipedia.org/wiki/CSS",
@@ -30,14 +39,14 @@ function Images() {
     setActiveImage(null);
   };
   return (
-    <div style={{display: "flex"}}>
-      <div>
-        <img src={reactLogo} alt="React" className="imageStyle" onClick={() => handleImageClick("react")}/>
-        <img src={javaScriptLogo} alt="JavaScript" className="imageStyle" onClick={() => handleImageClick("javascript")}/>
-        <img src={htmlLogo} alt="HTML" className="imageStyle" onClick={() => handleImageClick("html")}/>
-        <img src={muiLogo} alt="Material UI" className="imageStyle" onClick={() => handleImageClick("mui")}/>
-        <img src={cssLogo} alt="CSS" className="imageStyle" onClick={() => handleImageClick("css")}/>
-        <img src={mySQLogo} alt="MySQL" className="imageStyle" onClick={() => handleImageClick("mysql")}/>
+    <div>
+      <div className='tech-icons'>
+        {techIcons.map((icon, i) => icon.src ? (
+          <div className="tech-icon-wrapper" key={i}>
+            <img src={icon.src} alt={icon.alt || 'tech icon'} onClick={() => handleImageClick(icon.link)}/>
+          </div>
+        ) : null
+    )}
     </div>
 
     {/* Consider making the design for when this pops up more responsive, shifts elements on screen to fit them in the system*/}

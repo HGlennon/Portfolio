@@ -1,5 +1,5 @@
 :root {
-  --color-bg: #13101a;       
+  --color-bg: #191522;       
   --color-text: #e2e8f0;     
   --font-body: 'Inter', 'system-ui', sans-serif;
 
@@ -98,17 +98,9 @@ h1 {
     box-sizing: border-box;
 }
 
-.imageStyle {
-  width: 12vw;
-  max-width: 60px;
-  height: auto;
-  cursor: pointer;
-  margin: 4px;
-}
-
 .sidebar {
-  width: 90vw;
-  max-width: 410px;
+  width: 80vw;
+  max-width: 380px;
   min-width: 250px;
   height: 100vh;
   position: fixed;
@@ -161,7 +153,9 @@ aside h2 {
 }
 
 .social-icons {
-  display: flex;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   margin-top: 1.5rem;
 }
@@ -202,7 +196,6 @@ aside h2 {
   border-radius: 8px;
   margin-bottom: 1rem;
 }
-
 
 .tooltip-style {
   background: #616161;           
@@ -283,4 +276,53 @@ form button {
 
 form button:hover {
   background: #624ec6;
+}
+
+.tech-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.tech-icons img {
+  height: 60px;
+  width: 60px;
+  transition: transform 0.3s ease;
+}
+
+.tech-icons img:hover {
+  filter: brightness(1.2);
+}
+
+.tech-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+.tech-icon-wrapper:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.1); /* scale the whole wrapper */
+}
+
+.tech-icons img {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.tech-icons:hover .tech-icon-wrapper {
+  filter: grayscale(100%) brightness(0.5);
+  opacity: 0.4;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.tech-icons .tech-icon-wrapper:hover {
+  filter: none;
+  opacity: 1;
 }

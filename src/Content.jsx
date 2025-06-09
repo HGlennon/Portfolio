@@ -3,7 +3,6 @@ import ProjectCard from './ProjectCard';
 import HFMReduxImg from './assets/HFM_Redux.png';
 import FoodMateImg from './assets/FoodMate.jpg';
 import PortfolioImg from './assets/Portfolio.png';
-import ContactForm from './form';
 
 export default function Content() {
   return (
@@ -16,6 +15,7 @@ export default function Content() {
       </section>
 
       <section id="skills">
+        <p>Over the past few years, I have had the opportunity to work with an array of different technologies which can be seen in the images below.</p>
         <Images />
       </section>
 
@@ -40,7 +40,6 @@ export default function Content() {
           image = {PortfolioImg}
         />
       </section>
-      <ContactForm/>
     </main>
   );
 }

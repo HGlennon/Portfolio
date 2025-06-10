@@ -13,7 +13,6 @@
   src: url("./fonts/Poppins-Bold.ttf");
 }
 
-
 :root {
   --color-bg: #191522;       
   --color-text: #e2e8f0;     
@@ -34,6 +33,7 @@ body {
 
 html {
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -71,11 +71,19 @@ aside {
   display:none;
 }
 
+.nav-links {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-family: 'Poppins_Bold', sans-serif;
+  font-size: 0.9rem;
+}
 
 
 @media (max-width: 1024px) {
   .container {
-    padding: 1rem 0.5rem; /* Less padding on both sides */
+    padding: 0.9rem 1.4rem; /* Less padding on both sides */
   }
   .layout {
     flex-direction: column;
@@ -86,7 +94,7 @@ aside {
   .content {
     max-width: 100%;
     position: static;
-    padding: 1rem 0.5rem;
+    padding: 1rem 1.2rem;
   }
 
   aside {
@@ -101,7 +109,47 @@ aside {
     font-family: 'Poppins_Bold', sans-serif;
   }
 
-  .mobile-remove {
+  .nav-links{
+  display: none;
+  }
+}
+
+a {
+  color: var(--link-color);
+}
+a:hover {
+  color: var(--link-hover);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0.9rem 0.7rem; /* Less padding on both sides */
+  }
+  .layout {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  aside,
+  .content {
+    max-width: 100%;
+    position: static;
+    padding: 1rem 0.6rem;
+  }
+
+  aside {
+    top: auto;
+  }
+
+  .mobile-only {
+    display: block;
+    font-size: 0.6rem;
+    margin-bottom: 0.6rem;
+    margin-top: 0.4rem;
+    font-family: 'Poppins_Bold', sans-serif;
+  }
+
+  .nav-links{
   display: none;
   }
 }

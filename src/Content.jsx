@@ -7,6 +7,7 @@ import PortfolioImg from './assets/Portfolio.png';
 export default function Content() {
   return (
     <main className="content">
+      <div id='top'></div>
       <section id="about">
         <div className="mobile-only">
           <h2>ABOUT</h2>
@@ -21,7 +22,6 @@ export default function Content() {
         <div className="mobile-only">
           <h2>SKILLSET</h2>
         </div>
-        <p>Over the past few years, I have had the opportunity to work with an array of different technologies which can be seen in the images below.</p>
         <Images />
       </section>
 
@@ -29,7 +29,6 @@ export default function Content() {
         <div className="mobile-only">
           <h2>PROJECTS</h2>
         </div>
-        <p>Here are some of the projects I have worked on:</p>
         <ProjectCard
           title="HFM Redux"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut."

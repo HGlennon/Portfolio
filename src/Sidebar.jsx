@@ -20,11 +20,9 @@ export default function Sidebar() {
         <p>I build fast, accessible, modern web experiences.</p>
       </div>
       <nav className="nav-links">
-        <div className="mobile-remove">
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Projects</a>
-        </div>
+          <a href="#" onClick={(e) => {e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth'})}}>ABOUT</a>
+          <a href="#skills">SKILLSET</a>
+          <a href="#projects">PROJECTS</a>
       </nav>
       <div className="social-icons">
           <a 

@@ -8,6 +8,9 @@ export default function Content() {
   return (
     <main className="content">
       <section id="about">
+        <div className="mobile-only">
+          <h2>ABOUT</h2>
+        </div>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris.</p>
@@ -15,11 +18,17 @@ export default function Content() {
       </section>
 
       <section id="skills">
+        <div className="mobile-only">
+          <h2>SKILLSET</h2>
+        </div>
         <p>Over the past few years, I have had the opportunity to work with an array of different technologies which can be seen in the images below.</p>
         <Images />
       </section>
 
       <section id="projects">
+        <div className="mobile-only">
+          <h2>PROJECTS</h2>
+        </div>
         <p>Here are some of the projects I have worked on:</p>
         <ProjectCard
           title="HFM Redux"

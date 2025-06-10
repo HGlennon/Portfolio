@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './main.css';
+import { Tooltip } from 'react-tooltip';
 import reactLogo from './assets/react.svg'
 import muiLogo from './assets/mui.svg'
 import javaScriptLogo from './assets/javaScript.svg'
@@ -7,6 +8,10 @@ import mySQLogo from './assets/mysql.svg'
 import htmlLogo from './assets/html.svg'
 import cssLogo from './assets/css.svg'
 import crossIcon from './assets/cross.svg';
+import cppLogo from './assets/cpp.svg';
+import pythonLogo from './assets/python.png';
+import linuxLogo from './assets/linux.png';
+import laravelLogo from './assets/laravel.svg';
 
 const techIcons = [
   { key: 'react', src: reactLogo, alt: 'React', link: 'react' },
@@ -14,7 +19,11 @@ const techIcons = [
   { key: 'javascript', src: javaScriptLogo, alt: 'JavaScript', link: 'javascript' },
   { key: 'mysql', src: mySQLogo, alt: 'MySQL', link: 'mysql' },
   { key: 'html', src: htmlLogo, alt: 'HTML', link: 'html' },
-  { key: 'css', src: cssLogo, alt: 'CSS', link: 'css' }
+  { key: 'css', src: cssLogo, alt: 'CSS', link: 'css' },
+  { key: 'cpp', src: cppLogo, alt: 'C++', link: 'cpp' },
+  { key: 'python', src: pythonLogo, alt: 'Python', link: 'python' },
+  { key: 'linux', src: linuxLogo, alt: 'Linux', link: 'linux' },
+  { key: 'laravel', src: laravelLogo, alt: 'Laravel', link: 'laravel' }
 ];
 
 // Temporary, may change in the future for explanation on how I use these languages and frameworks
@@ -30,6 +39,7 @@ const imageWikiLinks = {
 // Add Git, Github, and C++
 function Images() {
   const [activeImage, setActiveImage] = useState(null);
+  const [hoveredKey, setHoveredKey] = useState(null);
 
   const handleImageClick = (imageKey) => {
     setActiveImage(imageKey);
@@ -38,12 +48,23 @@ function Images() {
   const closeSidebar = () => {
     setActiveImage(null);
   };
+  
   return (
+    
     <div>
       <div className='tech-icons'>
         {techIcons.map((icon, i) => icon.src ? (
           <div className="tech-icon-wrapper" key={i}>
-            <img src={icon.src} alt={icon.alt || 'tech icon'} onClick={() => handleImageClick(icon.link)}/>
+            <img 
+              src={icon.src} 
+              alt={icon.alt || 'tech icon'} 
+              onClick={() => handleImageClick(icon.link)}
+              data-tooltip-id={`tooltip-${icon.key}`}
+              data-tooltip-content={icon.tooltip || icon.alt}
+              onMouseEnter={() => setHoveredKey(icon.key)}
+              onMouseLeave={() => setHoveredKey(null)}
+              className={`tech-icon-img ${hoveredKey && hoveredKey !== icon.key ? 'dimmed' : ''}`}
+            />
           </div>
         ) : null
     )}
@@ -61,6 +82,19 @@ function Images() {
         </iframe>
       </div>
     )}
+
+    {techIcons.map((icon) => (
+      <Tooltip
+        key={`tooltip-${icon.key}`}
+        id={`tooltip-${icon.key}`}
+        place="bottom"
+        className="tooltip-style"
+        delayShow={300}
+        delayHide={100}
+      />
+    ))}
+
+
     </div>
   )
 }

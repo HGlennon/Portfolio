@@ -20,9 +20,11 @@ export default function Sidebar() {
         <p>I build fast, accessible, modern web experiences.</p>
       </div>
       <nav className="nav-links">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
+        <div className="mobile-remove">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+        </div>
       </nav>
       <div className="social-icons">
           <a 

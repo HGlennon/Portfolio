@@ -11,12 +11,12 @@ export default function Sidebar() {
   return (
     <aside>
       <div>
-        <h1>
+        <h1 className="title">
           <a href="#about" style={{ color: "inherit", textDecoration: "none" }}>
             Harrison Glennon
           </a>
         </h1>        
-        <h2>Aspiring Web Developer</h2>
+        <h2 className="title">Aspiring Web Developer</h2>
         <p>I build fast, accessible, modern web experiences.</p>
       </div>
       <nav className="nav-links">

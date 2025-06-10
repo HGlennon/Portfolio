@@ -1,7 +1,23 @@
+@font-face {
+  font-family: 'Inter_Bold';
+  src: url("./fonts/Inter_28pt-Bold.ttf");
+}
+
+@font-face {
+  font-family: 'Inter_Regular';
+  src: url("./fonts/Inter-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'Poppins_Bold';
+  src: url("./fonts/Poppins-Bold.ttf");
+}
+
+
 :root {
   --color-bg: #191522;       
   --color-text: #e2e8f0;     
-  --font-body: 'Inter', 'system-ui', sans-serif;
+  --font-body: 'Inter_Regular', 'system-ui', sans-serif;
 
   --radius-sm: 4px;
   --radius-md: 8px;
@@ -80,8 +96,9 @@ aside {
   .mobile-only {
     display: block;
     font-size: 0.6rem;
-    margin-bottom: 1rem;
-    font-weight: 950;
+    margin-bottom: 0.6rem;
+    margin-top: 0.4rem;
+    font-family: 'Poppins_Bold', sans-serif;
   }
 
   .mobile-remove {
@@ -327,4 +344,8 @@ form button:hover {
   filter: grayscale(100%) brightness(0.5);
   opacity: 0.46;
   transition: filter 0.4s ease, opacity 0.4s ease;
+}
+
+.title {
+  font-family: 'Inter_Bold', sans-serif;
 }

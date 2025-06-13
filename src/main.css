@@ -13,6 +13,8 @@
   src: url("./fonts/Poppins-Bold.ttf");
 }
 
+
+
 :root {
   --color-bg: #191522;       
   --color-text: #e2e8f0;     
@@ -235,8 +237,8 @@ aside h2 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  margin-top: 1.5rem;
+  gap: 1.1rem;
+  margin-top: 1.8rem;
 }
 
 .social-icons a {

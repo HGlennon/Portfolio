@@ -12,7 +12,11 @@ export default function Sidebar() {
     <aside>
       <div>
         <h1 className="title">
-          <a href="#about" style={{ color: "inherit", textDecoration: "none" }}>
+          <a 
+            href="#" 
+            onClick={(e) => {e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth'})}} 
+            style={{ color: "inherit", textDecoration: "none" }}
+          >
             Harrison Glennon
           </a>
         </h1>        
@@ -33,7 +37,7 @@ export default function Sidebar() {
             data-tooltip-id="github-tooltip"
             data-tooltip-content="GitHub"
           >
-            <FaGithub size={28} />
+            <FaGithub size={24} />
           </a>
           <a 
             href="https://www.linkedin.com/in/harrisonglennon/" 
@@ -43,7 +47,7 @@ export default function Sidebar() {
             data-tooltip-id="linkedin-tooltip"
             data-tooltip-content="LinkedIn"
           >
-            <FaLinkedin size={28} />
+            <FaLinkedin size={24} />
           </a>
           <a 
             href={`mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`}
@@ -53,7 +57,7 @@ export default function Sidebar() {
             data-tooltip-id="email-tooltip"
             data-tooltip-content="Message Me!"
           >
-            <FaRegEnvelope size={28} />
+            <FaRegEnvelope size={24} />
           </a>
       </div>
       <Tooltip 

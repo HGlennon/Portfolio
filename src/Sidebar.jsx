@@ -9,28 +9,38 @@ export default function Sidebar() {
   const subject = "";
   const message = "";
 
-    useEffect(() => {
-    const sections = document.querySelectorAll("section[id]");
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const sectionId = entry.target.id;
-            setActiveLink(sectionId);
-          }
-        });
-      },
-      {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.6, // section is considered visible when 60% in view
-      }
-    );
+  useEffect(() => {
+    const sections = Array.from(document.querySelectorAll("section[id]"));
 
-    sections.forEach((section) => observer.observe(section));
+    const handleScroll = () => {
+      const scrollPos = window.scrollY + window.innerHeight / 2;
+
+      let foundSection = false;
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i];
+        const offsetTop = section.offsetTop;
+        const offsetHeight = section.offsetHeight;
+
+        if (scrollPos >= offsetTop && scrollPos < offsetTop + offsetHeight) {
+          setActiveLink((prev) => (prev === section.id ? prev : section.id));
+          foundSection = true;
+          break;
+        }
+      }
+
+      if (!foundSection && window.scrollY < 100) {
+        setActiveLink((prev) => (prev === "about" ? prev : "about"));
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    // run once on mount
+    handleScroll();
 
     return () => {
-      sections.forEach((section) => observer.unobserve(section));
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 

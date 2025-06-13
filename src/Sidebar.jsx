@@ -1,12 +1,51 @@
 import { FaRegEnvelope, FaGithub, FaLinkedin } from "react-icons/fa6";
 import { Tooltip } from 'react-tooltip'
-
+import { useState, useEffect } from "react";
 
 export default function Sidebar() {
+  const [activeLink, setActiveLink] = useState("about");
 
   const email = "harrisongle@gmail.com";
   const subject = "";
   const message = "";
+
+    useEffect(() => {
+    const sections = document.querySelectorAll("section[id]");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const sectionId = entry.target.id;
+            setActiveLink(sectionId);
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.6, // section is considered visible when 60% in view
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => {
+      sections.forEach((section) => observer.unobserve(section));
+    };
+  }, []);
+
+  const handleNavClick = (sectionId) => {
+    setActiveLink(sectionId);
+    
+    if (sectionId === "about") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
 
   return (
     <aside>
@@ -24,9 +63,19 @@ export default function Sidebar() {
         <p>I build fast, accessible, modern web experiences.</p>
       </div>
       <nav className="nav-links">
-          <a href="#" onClick={(e) => {e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth'})}}>ABOUT</a>
-          <a href="#skills">SKILLSET</a>
-          <a href="#projects">PROJECTS</a>
+        {[
+          { id: "about", label: "ABOUT" },
+          { id: "skills", label: "SKILLSET" },
+          { id: "projects", label: "PROJECTS" },
+        ].map(({ id, label }) => (
+          <button
+            key={id}
+            onClick={() => handleNavClick(id)}
+            className={`nav-button ${activeLink === id ? "active" : ""}`}
+          >
+            {label}
+          </button>
+        ))}
       </nav>
       <div className="social-icons">
           <a 

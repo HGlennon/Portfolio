@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: 'Inter_Regular';
-  src: url("./fonts/Inter-Regular.ttf");
+  src: url("./fonts/Inter_28pt-Regular.ttf");
 }
 
 @font-face {
@@ -15,8 +15,9 @@
 
 :root {
   --color-bg: #191522;       
-  --color-text: #e2e8f0;     
+  --color-text: #DEDEDE;     
   --font-body: 'Inter_Regular', 'system-ui', sans-serif;
+  
 
   --radius-sm: 4px;
   --radius-md: 8px;
@@ -31,6 +32,11 @@ body {
   min-height: 100vh;
 }
 
+p {
+  font-size: 1.1rem; /* or whatever size you prefer */
+  line-height: 1.4;  /* optional: for better readability */
+}
+
 html {
   height: 100%;
   scroll-behavior: smooth;
@@ -39,19 +45,17 @@ html {
 .container {
   display: flex;
   justify-content: center;
-  padding: 4rem 2rem;
+  padding: 0 2rem;
   max-width: 1320px;
   margin: 0 auto;
-  gap: 4rem;
 }
 
 aside {
   position: sticky;
   top: 4rem; /* Keeps it fixed while scrolling */
   flex: 1;
-  max-width: 600px;
+  max-width: 640px;
   height: fit-content;
-  padding: 2rem;
 }
 
 .layout {
@@ -59,12 +63,13 @@ aside {
   align-items: flex-start;
   justify-content: center;
   width: 100%;
+  gap: 4rem
 }
 
 .content {
   flex: 2;
-  max-width: 720px;
-  padding: 4rem;
+  max-width: 680px;
+  margin-top: 6.1rem;
 }
 
 .mobile-only {
@@ -72,7 +77,7 @@ aside {
 }
 
 .nav-links {
-  margin-top: 2rem;
+  margin-top: 1.6rem;
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
@@ -88,38 +93,34 @@ aside {
   font-weight: 600;
   font-size: 0.875rem;
   color: #a1a1aa;
-  position: relative;
   cursor: pointer;
   text-align: left;
-  transition: color 0.2s ease;
 }
 
-.nav-button:hover {
+.nav-button:hover .nav-label,
+.nav-button.active .nav-label {
   color: #ffffff;
 }
 
-.nav-button::after {
+.nav-label {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-label::after {
   content: "";
   position: absolute;
   bottom: -2px;
   left: 0;
-  width: 0%;
   height: 2px;
+  width: 0%;
   background-color: white;
   transition: width 0.3s ease;
 }
 
-.nav-button:hover::after {
-  width: 20%;
-}
-
-/* Active link style */
-.nav-button.active {
-  color: #ffffff;
-}
-
-.nav-button.active::after {
-  width: 20%;
+.nav-button:hover .nav-label::after,
+.nav-button.active .nav-label::after {
+  width: 100%;
 }
 
 
@@ -206,6 +207,7 @@ a:hover {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  color: #ffffff
 }
 
 .card {
@@ -438,4 +440,13 @@ form button:hover {
 
 .title {
   font-family: 'Inter_Bold', sans-serif;
+  color: #ffffff
+}
+
+#skills {
+  margin-top: 7rem;
+}
+
+#projects {
+  margin-top: 7rem;
 }

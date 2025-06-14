@@ -55,16 +55,22 @@ function Images() {
       <div className='tech-icons'>
         {techIcons.map((icon, i) => icon.src ? (
           <div className="tech-icon-wrapper" key={i}>
-            <img 
-              src={icon.src} 
-              alt={icon.alt || 'tech icon'} 
+            <img
+              src={icon.src}
+              alt={icon.alt || 'tech icon'}
+              tabIndex="0"
               onClick={() => handleImageClick(icon.link)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  handleImageClick(icon.link);
+                }
+              }}
               data-tooltip-id={`tooltip-${icon.key}`}
               data-tooltip-content={icon.tooltip || icon.alt}
               onMouseEnter={() => setHoveredKey(icon.key)}
               onMouseLeave={() => setHoveredKey(null)}
               className={`tech-icon-img ${hoveredKey && hoveredKey !== icon.key ? 'dimmed' : ''}`}
-            />
+            />          
           </div>
         ) : null
     )}

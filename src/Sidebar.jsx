@@ -52,7 +52,9 @@ export default function Sidebar() {
     } else {
       const section = document.getElementById(sectionId);
       if (section) {
-        section.scrollIntoView({ behavior: "smooth" });
+        const yOffset = -80;
+        const y = section.getBoundingClientRect().top + window.scrollY + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
       }
     }
   };
@@ -83,7 +85,7 @@ export default function Sidebar() {
             onClick={() => handleNavClick(id)}
             className={`nav-button ${activeLink === id ? "active" : ""}`}
           >
-            {label}
+            <span className="nav-label">{label}</span>          
           </button>
         ))}
       </nav>

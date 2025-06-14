@@ -72,7 +72,7 @@ export default function Sidebar() {
           </a>
         </h1>        
         <h2 className="title">Aspiring Web Developer</h2>
-        <p>I build fast, accessible, modern web experiences.</p>
+        <p>I create accessible, user friendly websites online.</p>
       </div>
       <nav className="nav-links">
         {[

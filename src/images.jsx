@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './main.css';
 import { Tooltip } from 'react-tooltip';
 import reactLogo from './assets/react.svg'
@@ -41,6 +41,17 @@ function Images() {
   const [activeImage, setActiveImage] = useState(null);
   const [hoveredKey, setHoveredKey] = useState(null);
 
+  useEffect(() => {
+    const cursor = document.querySelector('.custom-cursor');
+    if (!cursor) return;
+
+    if (hoveredKey) {
+      cursor.classList.add('hovered');
+    } else {
+      cursor.classList.remove('hovered');
+    }
+  }, [hoveredKey]);
+
   const handleImageClick = (imageKey) => {
     setActiveImage(imageKey);
   };
@@ -52,29 +63,32 @@ function Images() {
   return (
     
     <div>
-      <div className='tech-icons'>
-        {techIcons.map((icon, i) => icon.src ? (
-          <div className="tech-icon-wrapper" key={i}>
-            <img
-              src={icon.src}
-              alt={icon.alt || 'tech icon'}
-              tabIndex="0"
-              onClick={() => handleImageClick(icon.link)}
-              onKeyDown={(e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                  handleImageClick(icon.link);
-                }
-              }}
-              data-tooltip-id={`tooltip-${icon.key}`}
-              data-tooltip-content={icon.tooltip || icon.alt}
-              onMouseEnter={() => setHoveredKey(icon.key)}
-              onMouseLeave={() => setHoveredKey(null)}
-              className={`tech-icon-img ${hoveredKey && hoveredKey !== icon.key ? 'dimmed' : ''}`}
-            />          
-          </div>
-        ) : null
-    )}
-    </div>
+      <div className="tech-icons">
+        {techIcons.map((icon, i) =>
+          icon.src ? (
+            <div className="tech-icon-wrapper" key={i}>
+              <img
+                src={icon.src}
+                alt={icon.alt || 'tech icon'}
+                tabIndex="0"
+                onClick={() => handleImageClick(icon.link)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    handleImageClick(icon.link);
+                  }
+                }}
+                data-tooltip-id={`tooltip-${icon.key}`}
+                data-tooltip-content={icon.tooltip || icon.alt}
+                onMouseEnter={() => setHoveredKey(icon.key)}
+                onMouseLeave={() => setHoveredKey(null)}
+                className={`tech-icon-img ${
+                  hoveredKey && hoveredKey !== icon.key ? 'dimmed' : ''
+                }`}
+              />
+            </div>
+          ) : null
+        )}
+      </div>
 
     {/* Consider making the design for when this pops up more responsive, shifts elements on screen to fit them in the system*/}
     {activeImage && (

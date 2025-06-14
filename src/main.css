@@ -14,7 +14,7 @@
 }
 
 :root {
-  --color-bg: #191522;       
+  --color-bg: #171320;       
   --color-text: #DEDEDE;     
   --font-body: 'Inter_Regular', 'system-ui', sans-serif;
   
@@ -34,7 +34,7 @@ body {
 
 p {
   font-size: 1.1rem; /* or whatever size you prefer */
-  line-height: 1.4;  /* optional: for better readability */
+  line-height: 1.5;  /* optional: for better readability */
 }
 
 html {
@@ -155,6 +155,9 @@ aside {
   .nav-links{
   display: none;
   }
+  .custom-cursor{
+    display: none;
+  }
 }
 
 a {
@@ -194,6 +197,9 @@ a:hover {
 
   .nav-links{
   display: none;
+  }
+  .custom-cursor {
+    display: none;
   }
 }
 
@@ -449,4 +455,32 @@ form button:hover {
 
 #projects {
   margin-top: 7rem;
+}
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.15s ease-out, opacity 0.2s ease-out;
+  opacity: 0.2;
+  mix-blend-mode: screen;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.14) 0%,
+    rgba(255, 255, 255, 0.07) 30%,
+    rgba(255, 255, 255, 0.029) 70%,
+    
+    transparent 80%
+  );
+  
+  box-shadow:
+    0 0 100px 60px rgba(255, 255, 255, 0.025),
+    0 0 200px 120px rgba(130, 106, 251, 0.025);
 }

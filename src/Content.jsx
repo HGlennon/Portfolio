@@ -30,12 +30,6 @@ export default function Content() {
           <h2>PROJECTS</h2>
         </div>
         <ProjectCard
-          title="HFM Redux"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut."
-          link="https://moddb.com/mods/hfm-redux"
-          image = {HFMReduxImg}
-        />
-        <ProjectCard
           title="FoodMate"
           description="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.."
           link="https://foodmate.dev"

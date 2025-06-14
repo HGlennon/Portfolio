@@ -1,4 +1,4 @@
-import { FaRegEnvelope, FaGithub, FaLinkedin } from "react-icons/fa6";
+import { FaRegEnvelope, FaGithub, FaLinkedin, FaDownload } from "react-icons/fa6";
 import { Tooltip } from 'react-tooltip'
 import { useState, useEffect } from "react";
 
@@ -52,7 +52,10 @@ export default function Sidebar() {
     } else {
       const section = document.getElementById(sectionId);
       if (section) {
-        const yOffset = -80;
+        let yOffset = -180; 
+        if (sectionId === "skills") {
+          yOffset = -380;
+        }
         const y = section.getBoundingClientRect().top + window.scrollY + yOffset;
         window.scrollTo({ top: y, behavior: "smooth" });
       }
@@ -71,7 +74,7 @@ export default function Sidebar() {
             Harrison Glennon
           </a>
         </h1>        
-        <h2 className="title">Aspiring Web Developer</h2>
+        <h2 className="title">Frontend Web Developer</h2>
         <p>I create accessible, user friendly websites online.</p>
       </div>
       <nav className="nav-links">
@@ -120,6 +123,16 @@ export default function Sidebar() {
           >
             <FaRegEnvelope size={24} />
           </a>
+          <a 
+            href="https://drive.google.com/file/d/17Sku6JKhWVklgO7kPwpcV-32SpzwI7VW/view?usp=sharing"
+            target="_blank" 
+            rel="noopener noreferrer" 
+            aria-label="Email"
+            data-tooltip-id="cv-tooltip"
+            data-tooltip-content="View CV"
+          >
+            <FaDownload size={24} />
+          </a>
       </div>
       <Tooltip 
         id="github-tooltip" 
@@ -137,6 +150,13 @@ export default function Sidebar() {
       />
       <Tooltip 
         id="email-tooltip" 
+        place="bottom" 
+        className="tooltip-style" 
+        delayShow={300}
+        delayHide={100}
+      />
+      <Tooltip 
+        id="cv-tooltip" 
         place="bottom" 
         className="tooltip-style" 
         delayShow={300}

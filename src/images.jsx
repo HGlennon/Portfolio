@@ -12,6 +12,8 @@ import cppLogo from './assets/cpp.svg';
 import pythonLogo from './assets/python.png';
 import linuxLogo from './assets/linux.png';
 import laravelLogo from './assets/laravel.svg';
+import typescriptLogo from './assets/typescript.png'
+import nextjsLogo from './assets/nextjs.svg'
 
 const techIcons = [
   { key: 'react', src: reactLogo, alt: 'React', link: 'react' },
@@ -23,18 +25,10 @@ const techIcons = [
   { key: 'cpp', src: cppLogo, alt: 'C++', link: 'cpp' },
   { key: 'python', src: pythonLogo, alt: 'Python', link: 'python' },
   { key: 'linux', src: linuxLogo, alt: 'Linux', link: 'linux' },
-  { key: 'laravel', src: laravelLogo, alt: 'Laravel', link: 'laravel' }
+  { key: 'laravel', src: laravelLogo, alt: 'Laravel', link: 'laravel' },
+  {key: 'typescript', src: typescriptLogo, alt: 'TypeScript', link: 'typescript'},
+  {key: 'nextjs', src: nextjsLogo, alt: 'Next.js', link: 'nextjs'}
 ];
-
-// Temporary, may change in the future for explanation on how I use these languages and frameworks
-const imageWikiLinks = {
-  css: "https://en.wikipedia.org/wiki/CSS",
-  javascript: "https://en.wikipedia.org/wiki/JavaScript",
-  react: "https://en.wikipedia.org/wiki/React_(software)",
-  mui: "https://en.wikipedia.org/wiki/Material_Design",
-  html: "https://en.wikipedia.org/wiki/HTML",
-  mysql: "https://en.wikipedia.org/wiki/MySQL"
-};
 
 // Add Git, Github, and C++
 function Images() {
@@ -89,19 +83,6 @@ function Images() {
           ) : null
         )}
       </div>
-
-    {/* Consider making the design for when this pops up more responsive, shifts elements on screen to fit them in the system*/}
-    {activeImage && (
-      <div className="sidebar">
-        <div className="sidebar-close" onClick={closeSidebar}>
-          <img src={crossIcon} alt="Close" className="close-icon"/>
-        </div>
-        <iframe
-          title={`${activeImage} Wikipedia`}
-          src={imageWikiLinks[activeImage]}>
-        </iframe>
-      </div>
-    )}
 
     {techIcons.map((icon) => (
       <Tooltip

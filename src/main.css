@@ -24,6 +24,11 @@
   --radius-xl: 16px;
 }
 
+::selection {
+  background-color: #A666FF; /* highlight background color, maybe change later */
+  color: #171320;
+}
+
 body {
   font-family: var(--font-body);
   margin: 0;
@@ -33,7 +38,7 @@ body {
 }
 
 p {
-  font-size: 1.1rem; /* or whatever size you prefer */
+  font-size: 1rem; /* or whatever size you prefer */
   line-height: 1.5;  /* optional: for better readability */
 }
 
@@ -95,6 +100,7 @@ aside {
   color: #a1a1aa;
   cursor: pointer;
   text-align: left;
+  user-select: text;
 }
 
 .nav-button:hover .nav-label,
@@ -410,14 +416,14 @@ form button:hover {
 .tech-icons {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.55rem;
+  gap: 0.6rem;
   margin-top: 2rem;
   cursor: pointer;
 }
 
 .tech-icon-wrapper {
-  width: 55px;
-  height: 55px;
+  width: 60px;
+  height: 60px;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 10px;
   box-sizing: border-box;
@@ -430,8 +436,8 @@ form button:hover {
 }
 
 .tech-icons img {
-  height: 55px;
-  width: 55px;
+  height: 60px;
+  width: 60px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   padding: 5px;
@@ -450,11 +456,11 @@ form button:hover {
 }
 
 #skills {
-  margin-top: 7rem;
+  margin-top: 3rem;
 }
 
 #projects {
-  margin-top: 7rem;
+  margin-top: 3rem;
 }
 
 .custom-cursor {

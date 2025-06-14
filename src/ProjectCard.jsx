@@ -1,13 +1,36 @@
-// components/ProjectCard.jsx
+import { useEffect } from 'react';
+
 export default function ProjectCard({ title, description, link, image }) {
+  const handleMouseEnter = () => {
+    const cursor = document.querySelector('.custom-cursor');
+    if (cursor) {
+      cursor.classList.add('hovered');
+    }
+  };
+
+  const handleMouseLeave = () => {
+    const cursor = document.querySelector('.custom-cursor');
+    if (cursor) {
+      cursor.classList.remove('hovered');
+    }
+  };
+
   return (
-    <div className="project-card">
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="project-card"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       {image && (
-        <img src={image} alt={title} className="project-image"/>
+        <img src={image} alt={title} className="project-image" />
       )}
-      <h3>{title}</h3>
-      <p>{description}</p>
-      <a href={link} target="_blank" rel="noopener noreferrer">View Project</a>
-    </div>
+      <div className="project-content">
+        <h3 className="project-title">{title}</h3>
+        <p className="project-description">{description}</p>
+      </div>
+    </a>
   );
 }

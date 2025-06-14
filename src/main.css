@@ -304,34 +304,6 @@ aside h2 {
   color: white;
 }
 
-.project-card {
-  border: 1px solid #ccc;
-  padding: 1rem;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-}
-
-.project-card h3 {
-  margin: 0 0 0.5rem;
-}
-
-.project-card p {
-  margin: 0 0 0.75rem;
-}
-
-.project-card a {
-  color: #4ea8de;
-  text-decoration: none;
-}
-
-.project-image{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-}
-
 .tooltip-style {
   background: #616161;           
   color: var(--color-text);        
@@ -494,4 +466,54 @@ form button:hover {
 .custom-cursor.hovered {
   opacity: 0.1;
   transition: opacity 0.1s ease;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 1rem;
+  gap: 1.5rem;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
+}
+
+.project-image {
+  width: 256px;
+  height: auto;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+  max-height: 100%;
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.project-title {
+  font-family: 'Inter_Bold', sans-serif;
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem;
+}
+
+.project-description {
+  font-family: 'Inter_Regular', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
 }

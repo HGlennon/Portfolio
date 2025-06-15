@@ -132,7 +132,7 @@ aside {
 
 @media (max-width: 1024px) {
   .container {
-    padding: 0.9rem 1.4rem; /* Less padding on both sides */
+    padding: 0.9rem 1.4rem;
   }
   .layout {
     flex-direction: column;

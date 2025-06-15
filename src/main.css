@@ -390,7 +390,6 @@ form button:hover {
   flex-wrap: wrap;
   gap: 0.6rem;
   margin-top: 2rem;
-  cursor: pointer;
 }
 
 .tech-icon-wrapper {
@@ -516,4 +515,26 @@ form button:hover {
   font-size: 1rem;
   line-height: 1.5;
   margin: 0;
+}
+
+.project-card-wrapper:hover .project-card {
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+
+.project-card-wrapper:hover .project-card:hover {
+  opacity: 1 !important;
+}
+
+.project-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.27rem;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: #a1a1aa;
+}
+
+.project-span {
+  margin-top: 0.05rem;
 }

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-export default function ProjectCard({ title, description, link, image }) {
+export default function ProjectCard({ title, description, link, image, meta }) {
   const handleMouseEnter = () => {
     const cursor = document.querySelector('.custom-cursor');
     if (cursor) {
@@ -30,6 +30,11 @@ export default function ProjectCard({ title, description, link, image }) {
       <div className="project-content">
         <h3 className="project-title">{title}</h3>
         <p className="project-description">{description}</p>
+        {meta && (
+          <div className="project-meta">
+            {meta}
+          </div>
+        )}
       </div>
     </a>
   );

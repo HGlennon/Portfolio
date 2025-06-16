@@ -3,6 +3,7 @@ import ProjectCard from './ProjectCard';
 import HFMReduxImg from './assets/HFM_Redux.png';
 import FoodMateImg from './assets/FoodMate.jpg';
 import PortfolioImg from './assets/Portfolio.png';
+
 import { HiOutlineDownload, HiStar } from "react-icons/hi";
 
 export default function Content() {

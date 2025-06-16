@@ -15,6 +15,18 @@ export default function ProjectCard({ title, description, link, image, meta }) {
     }
   };
 
+  const getOptimizedSources = (imgPath) => {
+    if (!imgPath) return {};
+    const base = imgPath.replace(/\.(png|jpg|jpeg)$/i, '');
+    return {
+      webp: `${base}.webp`,
+      avif: `${base}.avif`,
+      fallback: imgPath
+    };
+  };
+
+  const { webp, avif, fallback } = getOptimizedSources(image);
+
   return (
     <a
       href={link}
@@ -25,7 +37,18 @@ export default function ProjectCard({ title, description, link, image, meta }) {
       onMouseLeave={handleMouseLeave}
     >
       {image && (
-        <img src={image} alt={title} className="project-image" />
+        <picture>
+          <source srcSet={avif} type="image/avif" />
+          <source srcSet={webp} type="image/webp" />
+          <img
+            src={fallback}
+            alt={title}
+            className="project-image"
+            loading="lazy"
+            width="600"
+            height="400"
+          />
+        </picture>
       )}
       <div className="project-content">
         <h3 className="project-title">{title}</h3>

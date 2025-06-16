@@ -7,12 +7,11 @@ import javaScriptLogo from './assets/javaScript.svg'
 import mySQLogo from './assets/mysql.svg'
 import htmlLogo from './assets/html.svg'
 import cssLogo from './assets/css.svg'
-import crossIcon from './assets/cross.svg';
 import cppLogo from './assets/cpp.svg';
-import pythonLogo from './assets/python.png';
-import linuxLogo from './assets/linux.png';
+import pythonLogo from './assets/python.svg';
+import linuxLogo from './assets/linux.svg';
 import laravelLogo from './assets/laravel.svg';
-import typescriptLogo from './assets/typescript.png'
+import typescriptLogo from './assets/typeScript.svg'
 import nextjsLogo from './assets/nextjs.svg'
 
 const techIcons = [

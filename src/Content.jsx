@@ -65,7 +65,7 @@ export default function Content() {
             }
           />
           <ProjectCard
-            title="Portfolio Website"
+            title="Portfolio"
             description="A personal website that was created to demonstrate my current progress in web development and technologies I have learnt so far, and you're looking at it right now!"
             link="https://hglennon.dev"
             image = "Portfolio.png"

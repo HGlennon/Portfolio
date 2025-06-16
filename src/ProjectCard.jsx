@@ -1,5 +1,3 @@
-import { useEffect } from 'react';
-
 export default function ProjectCard({ title, description, link, image, meta }) {
   const handleMouseEnter = () => {
     const cursor = document.querySelector('.custom-cursor');

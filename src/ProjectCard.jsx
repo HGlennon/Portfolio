@@ -15,14 +15,12 @@ export default function ProjectCard({ title, description, link, image, meta }) {
     }
   };
 
-  // Derive base name and paths for WebP/AVIF if available
-  const getOptimizedSources = (imgPath) => {
-    if (!imgPath) return {};
-    const base = imgPath.replace(/\.(png|jpg|jpeg|webp|avif)$/i, '');
+  const getOptimizedSources = (filename) => {
+    const base = filename.replace(/\.(png|jpg|jpeg|webp|avif)$/i, '');
     return {
-      webp: `${base}.webp`,
-      avif: `${base}.avif`,
-      fallback: imgPath,
+      webp: `/images/${base}.webp`,
+      avif: `/images/${base}.avif`,
+      fallback: `/images/${filename}`,
     };
   };
 

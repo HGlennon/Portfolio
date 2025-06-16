@@ -1,8 +1,5 @@
 import Images from './images';
 import ProjectCard from './ProjectCard';
-import HFMReduxImg from './assets/HFM_Redux.png';
-import FoodMateImg from './assets/FoodMate.jpg';
-import PortfolioImg from './assets/Portfolio.png';
 
 import { HiOutlineDownload, HiStar } from "react-icons/hi";
 
@@ -47,7 +44,7 @@ export default function Content() {
             title="HFM Redux"
             description="A mod for Victoria 2 which adds more features, historical fixes and QoL changes to the game. Received considerable success amongst the modding community for its new features. "
             link="https://www.moddb.com/mods/hfm-redux"
-            image = {HFMReduxImg}
+            image = "HFM_Redux.png"
             meta = {
               <>
                 <HiOutlineDownload size={16}/>
@@ -59,7 +56,7 @@ export default function Content() {
             title="FoodMate"
             description="An accessible, health-oriented recipe search website powered by React, MUI, and Edamam API. Made as part of a dissertation during my studies at the university of Lincoln."
             link="https://foodmate.dev"
-            image = {FoodMateImg}
+            image = "FoodMate.jpg"
             meta = {
               <>
                 <HiStar size={16}/>
@@ -71,7 +68,7 @@ export default function Content() {
             title="Portfolio Website"
             description="A personal website that was created to demonstrate my current progress in web development and technologies I have learnt so far, and you're looking at it right now!"
             link="https://hglennon.dev"
-            image = {PortfolioImg}
+            image = "Portfolio.png"
             meta = {
               <>
                 <HiStar size={16}/>

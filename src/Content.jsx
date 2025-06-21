@@ -3,6 +3,7 @@ import ProjectCard from './ProjectCard';
 
 import { HiOutlineDownload, HiStar } from "react-icons/hi";
 
+// The quick brown fox jumped over the lazy dog
 export default function Content() {
   return (
     <main className="content">
@@ -69,6 +70,18 @@ export default function Content() {
             description="A personal website that was created to demonstrate my current progress in web development and technologies I have learnt so far, and you're looking at it right now!"
             link="https://hglennon.dev"
             image = "Portfolio.png"
+            meta = {
+              <>
+                <HiStar size={16}/>
+                <span className="project-span">1</span>
+              </>
+            }
+          />
+          <ProjectCard
+            title="Raisin"
+            description="Raisin is a theme that was created for VS Code and gives a dark purple shade to the editor. This theme was primarily made to both reduce screen glare whilst also being very visually appealing."
+            link="https://marketplace.visualstudio.com/items?itemName=HGlennon.raisin"
+            image = "Raisin.png"
             meta = {
               <>
                 <HiStar size={16}/>

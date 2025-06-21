@@ -3,7 +3,6 @@ import ProjectCard from './ProjectCard';
 
 import { HiOutlineDownload, HiStar } from "react-icons/hi";
 
-// The quick brown fox jumped over the lazy dog
 export default function Content() {
   return (
     <main className="content">

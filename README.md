@@ -1,14 +1,19 @@
-# WIP
+# My Portfolio
 
-# React + Vite
+This is my portfolio website that was created primarily with [React](https://react.dev/) and [CSS](https://www.w3.org/Style/CSS/Overview.en.html) in order to show my skillset, projects, education and achievements. I am constantly adding to it with new accomplishments as time passes so look out for those! The layout for this website was also inspired by https://brittanychiang.com/, due to its simplicty and ability to easily convey information. However, the code for this portfolio is entirely my own.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Portfolio
 
-Currently, two official plugins are available:
+![image](https://raw.githubusercontent.com/HGlennon/Portfolio/refs/heads/main/public/images/portfolio_pic.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation
 
-## Expanding the ESLint configuration
+If you wish to run this site locally on your device, you can run: 
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### `npm install`
+
+Allows for the installation of npm, which is a package manager which is crucial in running this application. After this, you can type: 
+
+### `npm run dev`
+
+This command will run the app in development mode, and you can open [http://localhost:5173](http://localhost:5173) to view it in your browser.

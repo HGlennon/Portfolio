@@ -65,7 +65,7 @@ export default function Sidebar() {
   return (
     <aside>
       <div>
-        <h1 className="title">
+        <h1 className="titleName">
           <a 
             href="#" 
             onClick={(e) => {e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth'})}} 
@@ -74,7 +74,7 @@ export default function Sidebar() {
             Harrison Glennon
           </a>
         </h1>        
-        <h2 className="title">Frontend Web Developer</h2>
+        <h2 className="titleRole">Frontend Web Developer</h2>
         <p>I create accessible, user friendly websites online.</p>
       </div>
       <nav className="nav-links">

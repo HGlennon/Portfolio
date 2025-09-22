@@ -49,10 +49,6 @@ function Images() {
     setActiveImage(imageKey);
   };
 
-  const closeSidebar = () => {
-    setActiveImage(null);
-  };
-  
   return (
     
     <div>
@@ -93,8 +89,6 @@ function Images() {
         delayHide={100}
       />
     ))}
-
-
     </div>
   )
 }

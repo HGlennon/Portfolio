@@ -1,6 +1,6 @@
 # My Portfolio
 
-This is my portfolio website that was created primarily with [React](https://react.dev/) and [CSS](https://www.w3.org/Style/CSS/Overview.en.html) in order to show my skillset, projects, education and achievements. I am constantly adding to it with new accomplishments as time passes so look out for those! The layout for this website was also inspired by https://brittanychiang.com/, due to its simplicty and ability to easily convey information. However, the code for this portfolio is entirely my own.
+This is my portfolio website that was created primarily with **React**, **Javascript**, and **CSS** in order to show my skillset, projects, education and achievements. I am consistently adding to it with new accomplishments as time passes so look out for those! The layout for this website was also inspired by https://brittanychiang.com/, due to its simplicty and ability to easily convey information. However, the code for this portfolio is entirely my own.
 
 ## Portfolio Site
 

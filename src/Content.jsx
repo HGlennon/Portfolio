@@ -90,7 +90,7 @@ export default function Content() {
           />
           <ProjectCard
             title="ListIt"
-            description="ListIt is a to-do list website that was made to keep track of my day-to-day chores and tasks, this is also the first ever full-stack next.js project that I have created and it is still currently in development."
+            description="ListIt is a to-do list website that was made to keep track of my day-to-day chores and tasks, this is also the first ever full-stack next.js project that I have created and is still currently in development."
             link="https://journal-eight-dusky.vercel.app/login"
             image = "ListIt.png"
           />

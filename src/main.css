@@ -263,6 +263,20 @@ a:hover {
     height: auto;
     border-radius: var(--radius-sm);
   }
+
+    .project-card-wrapper:hover .project-card {
+    opacity: 1 !important;
+  }
+
+  .project-card-wrapper:hover .project-card:hover {
+    opacity: 1 !important;
+  }
+
+  .project-card:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
 }
 
 
@@ -554,6 +568,7 @@ form button:hover {
   height: auto;
   aspect-ratio: 16/9;
   object-fit: cover;
+  object-position: top;
   border-radius: var(--radius-sm);
   flex-shrink: 0;
   max-height: 100%;

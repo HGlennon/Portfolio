@@ -123,16 +123,6 @@ export default function Sidebar() {
           >
             <FaRegEnvelope size={24} />
           </a>
-          <a 
-            href="https://drive.google.com/file/d/17Sku6JKhWVklgO7kPwpcV-32SpzwI7VW/view?usp=sharing"
-            target="_blank" 
-            rel="noopener noreferrer" 
-            aria-label="Email"
-            data-tooltip-id="cv-tooltip"
-            data-tooltip-content="View CV"
-          >
-            <FaDownload size={24} />
-          </a>
       </div>
       <Tooltip 
         id="github-tooltip" 

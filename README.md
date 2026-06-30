@@ -1,6 +1,6 @@
 # My Portfolio
 
-This is my portfolio website that was created primarily with **React**, **Javascript**, and **CSS** in order to show my skillset, projects, education and achievements. I am consistently adding to it with new accomplishments as time passes so look out for those! The layout for this website was also inspired by https://brittanychiang.com/, due to its simplicty and ability to easily convey information. However, the code for this portfolio is entirely my own.
+This repository contains the source code for an older version of my portfolio website. While it is no longer actively maintained, it demonstrates my experience with React, JavaScript, Vite and modern frontend development.
 
 ## Portfolio Site
 

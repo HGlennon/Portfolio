@@ -1,4 +1,4 @@
-# My Portfolio
+# Portfolio
 
 This repository contains the source code for an older version of my portfolio website. While it is no longer actively maintained, it demonstrates my experience with React, JavaScript, Vite and modern frontend development.
 
